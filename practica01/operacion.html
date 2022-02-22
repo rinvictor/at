@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario operacion</title>
+    </head>
+    <h1>Formulario operacion</h1>
+    <p>En este caso si el usuario eligiera una acción le llevaría a rellenar unos campos u otros (¡pero aún no sabemos!)</p>
+    <form>
+        <label>Indique el motivo de su consulta:</label><br>
+            <input type="radio" name="consulta" value="reparacion" checked>Reparación<br>
+            <input type="radio" name="consulta" value="recogida" >Recogida de vehículo<br>
+            <input type="radio" name="consulta" value="compra-venta">Compra-venta<br>
+            <input type="radio" name="consulta" value="otro">Otro<br><br>
+        <label>Matrícula:</label><br>
+            <input type="text" name="matricula"><br><br>
+        <label>Marca del vehículo:</label><br>
+            <input type="text" name="marca"><br><br>
+        <label>Modelo del vehículo:</label><br>
+            <input type="text" name="modelo"><br><br>
+        <label>Color del vehículo:</label><br>
+            <input type="color" name="color"><br><br>
+        <label>Fecha para la cita:</label><br>
+            <input type="date" name="cita"><br><br>
+        <label>Comentarios adicionales:</label><br>
+            <textarea name="mensaje" rows="10" cols="30"></textarea><br><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+</html>
