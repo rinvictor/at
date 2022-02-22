@@ -56,4 +56,7 @@ Recibe un atributo que no esperaba.
 
 Utliza un atributo que está obsoleto.
 
-## Práctica 1.2. Elementos HTML.
+## Práctica 1.3. FreeFileSync
+Aprendí el uso de FreeFileSync en la asignatura de lagrs,yo en cambio prefiero usar github, me he creado un repositorio privado y ahí hago todas mis cosas.
+
+
