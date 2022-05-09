@@ -10,7 +10,7 @@ Este error es provocado porque se ha guardado el pdf como 'seguro escolar.pdf', 
 > Error: Attribute alt not allowed on element span at this point.
 collapse"><span onclick="search()" alt="busqueda" class="pull-right" style="padding-top: 10px;" id="icon-search"></span
 
-En este caso utiliza a etiqueta span en un lugar que no es adecuado, usando title este error no ocurriría.
+En este caso utiliza la etiqueta span en un lugar que no es adecuado, usando title este error no ocurriría.
 
 > Error: Element style not allowed as child of element p in this context. (Suppressing further errors from this subtree.)
 ↩</ul>↩<p><style type="text/css"> ↩↩ ↩.
@@ -21,7 +21,6 @@ W3C Validator sigue varios estándar como HTML5.Nightly, que indican que style s
 t-append"><input name="q" required="" placeholder="&nbsp; Buscar..." size="10" type="text" id="mod-finder-searchword" class="search-query input-medium" /> <butt
 Warning: The first occurrence of ID mod-finder-searchword was here
 rchword"> <input name="q" required="" placeholder="&nbsp; Buscar..." size="10" id="mod-finder-searchword" class="search-query input-medium" type="text" /> </lab
-
 
 Ha utlizado mod-finder-searchform en varios lugares del código.
 
@@ -57,6 +56,6 @@ Recibe un atributo que no esperaba.
 Utliza un atributo que está obsoleto.
 
 ## Práctica 1.3. FreeFileSync
-Aprendí el uso de FreeFileSync en la asignatura de lagrs,yo en cambio prefiero usar github, me he creado un repositorio privado y ahí hago todas mis cosas.
+Aprendí el uso de FreeFileSync en la asignatura de lagrs, yo en cambio prefiero usar git con github, me he creado un repositorio privado y ahí hago todas mis cosas.
 
 
