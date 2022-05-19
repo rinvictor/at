@@ -33,7 +33,7 @@ function multiplica(num, multiplicador){
 app.get('/api/dobla/:num', (req, res) => {
   let num = req.params.num;
   doblado = multiplica(num, 2); //Para multiplicar por 2
-  // Normalmente esto serÃ­a una llamada a una funciÃ³n
+  // Normalmente esto serÃ­a una llamada a una funcion
 
   console.log("El cliente envía " + num);
   console.log("La respuesta es " + doblado);
