@@ -34,6 +34,8 @@
     function manej_boton01(event) {
         navigator.geolocation.getCurrentPosition(posicioncoche, error, options);
         console.log("ubi coche")
+        let boton_borrado = document.querySelector("#boton02");
+        boton_borrado.disabled=false;
     }
     
     function manej_boton02(event) {
@@ -43,6 +45,8 @@
             localStorage.removeItem('latitud_coche');
             localStorage.removeItem('longitud_coche');
         }
+        let boton_borrado = document.querySelector("#boton02");
+        boton_borrado.disabled=true;
     }
     
 
@@ -71,20 +75,20 @@
 
         let latitud_coche = localStorage.getItem('latitud_coche');
         let longitud_coche = localStorage.getItem('longitud_coche');
-        console.log(latitud_coche);
+        console.log(latitud_coche, longitud_coche);
         if (latitud_coche && longitud_coche){
             let ubicacion_coche = [latitud_coche, longitud_coche];
             let mi_marcador_coche = L.marker(ubicacion_coche).addTo(mi_mapa);
             mi_marcador_coche.bindPopup("Coche").openPopup();
 
             let boton_borrar=document.querySelector("#boton02");
-            boton_borrar.textContent="adios";
+            boton_borrar.disabled=false;
         }else{
             let ubicacion_coche = [0, 0];
             let mi_marcador_coche = L.marker(ubicacion_coche).addTo(mi_mapa);
             mi_marcador_coche.bindPopup("Coche").closePopup();
             let boton_borrar=document.querySelector("#boton02");
-            boton_borrar.textContent="Hola";
+            boton_borrar.disabled=true;
         }
     });
 
