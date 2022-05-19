@@ -19,6 +19,7 @@ function cuenta_caracteres_especiales(contrasena, cadespeciales){
 }
 
 function valida_contrasena(contrasena, len, minminus, minmayus, minnumeros, mincaracespeciales, cadespeciales){
+    console.log(contrasena);
     try{
         if (arguments.length != 7){
             throw 'Error: Número incorrecto de argumentos';
@@ -28,7 +29,7 @@ function valida_contrasena(contrasena, len, minminus, minmayus, minnumeros, minc
             throw 'Error: Tipo de parámetro incorrecto';
         }
 
-        if (contrasena.length != len){
+        if (contrasena.length < len){
             return "Error: la contraseña debe tener "+len+" caracteres";
         }
         //Cuento las mayúsculas
@@ -56,10 +57,11 @@ function valida_contrasena(contrasena, len, minminus, minmayus, minnumeros, minc
     return "ok";
 }
 
-
+//Lo comento para la practica04
+/*
 console.log(valida_contrasena("HOla12._0¿", 10, 2, 2, 2, 2, "_,.-{}[]!\"·$%&/()=?¿¡'")); //ok
 console.log(valida_contrasena("HOla12._0¿", 10, 2, 2, 2, 5, "_,.-{}[]!\"·$%&/()=?¿¡'")); //Error: la contraseña debe tener 5 caracteres especiales
-console.log(valida_contrasena("HOla12._0¿", g, 2, 2, 2, 5, "_,.-{}[]!\"·$%&/()=?¿¡'"));
+console.log(valida_contrasena("HOla12._0¿", "g", 2, 2, 2, 5, "_,.-{}[]!\"·$%&/()=?¿¡'"));*/
 
 //console.log(contrasena, len, minminus, minmayus, minnumeros, mincaracespeciales, cadespeciales)
 //console.log(contrasena, len, minminus, minmayus, minnumeros, mincaracespeciales, cadespeciales)

@@ -27,7 +27,6 @@ app.get('/info/:id', (req, res) => {
   let id = req.params.id
   console.log(id)
   if(id==='0'){
-    console.log("2")
     res.json("['Nombre':'Pepe',Apellidos':'Perez Perez', 'DNI':'67898658J']");
   }else if(id==='1'){
     res.json("['Nombre':'Juan',Apellidos':'Palomo', 'DNI':'87392837H']");

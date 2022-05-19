@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 2.4</title>
+        <style>
+            .claseuno{
+                border-style: dotted;
+                border-color: black;
+                border-width: 20px;
+            }
+
+            .clasedos{
+                background-color: aqua;
+            }
+            .claseuno .clasedos{
+                color:red;
+            }
+            .clasecuatro{
+                height: 1000px;
+                border-style: solid;
+                border-color: chartreuse;
+                border-width: 5px;
+                text-align: center;
+                background-image: url("../images/cielo.jpg");
+                color: blanchedalmond;
+                font-size: 80px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="claseuno">Clase uno</div>
+        <div class="clasedos">Clase dos</div>
+        <div class="claseuno">
+            <p class="clasedos">
+                Clase dos en clase uno
+            </p>
+        </div>
+        <div class="clasecuatro">
+            <p>Clase cuatro</p>
+        </div>
+        
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 2.2</title>
+        <style>
+        .claseuno{
+            color:#c6ddf0;
+        }
+        .claseuno .clasedos{
+            text-decoration: underline;
+        }
+        .claseuno, .clasedos{
+            background-color: #ec4067;
+        }
+        div .clasetres{
+            background-color: #27e401;
+            color: #ffffff;
+        }
+        .claseuno .clasedos,.clasetres{
+            color:#1900ff;
+        }
+        </style>
+    </head>
+
+    <body>
+        <p class="claseuno">Clase uno</p>
+        <p class="clasedos">Clase dos sin herencia</p>
+        <div class="claseuno">
+            <p class="clasedos"> Clase dos que hereda de clase uno</p>
+        </div>
+        <div>
+            <p class="clasetres"> Clase tres dentro de un div sin clase</p>
+            <p class="clasedos">Clase dos dentro de un div sin clase</p>
+        </div>
+
+        <div class="claseuno">
+            <p class="clasedos"> Clase dos dentro de un div de clase uno</p>
+            <p class="clasetres"> Clase tres dentro de un div de clase uno</p>
+        </div>
+
+    </body>
+</html>

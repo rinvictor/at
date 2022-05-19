@@ -18,7 +18,7 @@ function obtener_lista_fechas(n){
 }
 
 function obtener_cumpleanos(lista_fechas){
-    console.log(lista_fechas)
+    //console.log(lista_fechas);
     var repetidos=[]
     for (let i=0;i<lista_fechas.length;i++){
         for (let j=0;j<lista_fechas.length;j++){
@@ -29,8 +29,7 @@ function obtener_cumpleanos(lista_fechas){
             }
         }
     }
-    //Devuelvo la longitud de la lista
-    return(repetidos.length)
+    return([repetidos.length, lista_fechas, repetidos])
 }
 
 function generar_listas(){
@@ -39,20 +38,31 @@ function generar_listas(){
     do{
         let lista_fechas = obtener_lista_fechas(i);
         c = obtener_cumpleanos(lista_fechas);
-        console.log(c)
         i++;
     }
-    while(c === 0);
+    while(c[0] === 0);
+    return c;
 }
 
-function obtener_dia(d){
-    var now = d;
-    var start = new Date(now.getFullYear(), 0, 0);
-    var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-    var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay);
-    console.log('Day of year: ' + day);
+function obtener_dia(day){
+    let year=2022; // asumo este calculo
+    var date = new Date(year, 0); // inicializar 2022-1-1
+    var cumpleanos =  new Date(date.setDate(day)); // calculo
+    let dia = cumpleanos.getDate(); //el dia 1 es el 31 de diciembre a las 12, soluciionado arriba para que sea el 1
+    let mes = cumpleanos.getMonth()+1; //para que no empiece en 0 y sea más legible
+    return dia + "/" + mes;
 }
 
-generar_listas();
-obtener_dia(233);
+let c=generar_listas();
+
+//Comento de cara a la practica 4
+/*
+console.log("Numero de personas con el cumpleaños repetido:", c[0]*2); //La funcion devuelve numero de cumpleaños repetidos, 1 cumpleaños, dos personas, 4 cumpleaños, 8 personas
+console.log("Lista de cumpleaños: ", c[1]);
+console.log("Longitud de la lista (número de personas): ", c[1].length);
+//Puede devolver más de un cumpleaños si da esa casualidad en la lista, resuelto en la p4 
+console.log("Cumpleaños repetido (día del año): ", c[2][0]);
+console.log("Cumpleaños repetido legible: ", obtener_dia(c[2][0]))
+*/
+
+//console.log(obtener_dia(2));

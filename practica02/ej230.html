@@ -3,8 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <title>Práctica 2.3</title>
+        <style>
+            .claseuno{
+                font-size: xx-small;
+            }
+            .clasedos{
+                text-align: center;
+            }
+            .clasetres{
+                color: blueviolet;
+            }
+            .clasecuatro{
+                background-color: darkolivegreen;
+            }
+            .claseuno.clasedos.clasetres{
+                color:blanchedalmond;
+                background-color: black;
+            }
+        </style>
     </head>
-    <div class="container">
-        
-    </div>
+    <body>
+        <div class="claseuno">Clase uno</div>
+        <div class="clasedos">Clase dos</div>
+        <div class="claseuno">
+            <div class="clasedos">
+                Clase dos dentro de clase uno.
+            </div>
+        </div>
+
+        <div class="claseuno clasedos clasetres">
+            Un div con todas las clases
+        </div>
+
+        <div class="clasecuatro">
+            Clase cuatro
+        </div>
+    </body>
+
 </html>
