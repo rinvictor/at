@@ -76,10 +76,15 @@
             let ubicacion_coche = [latitud_coche, longitud_coche];
             let mi_marcador_coche = L.marker(ubicacion_coche).addTo(mi_mapa);
             mi_marcador_coche.bindPopup("Coche").openPopup();
+
+            let boton_borrar=document.querySelector("#boton02");
+            boton_borrar.textContent="adios";
         }else{
             let ubicacion_coche = [0, 0];
             let mi_marcador_coche = L.marker(ubicacion_coche).addTo(mi_mapa);
             mi_marcador_coche.bindPopup("Coche").closePopup();
+            let boton_borrar=document.querySelector("#boton02");
+            boton_borrar.textContent="Hola";
         }
     });
 

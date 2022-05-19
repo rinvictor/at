@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="utf-8">
+  <title>Identificar una imagen</title>
+</head>
+
+<body>
+  <button id="boton01">Crear un gato</button>
+  <button id="boton02">Crear un periquito</button>
+  <p>Has hecho clic en: <span id=span01></span></p>
+  <div id=div01>
+  </div>
+
+  <script>
+    'use strict'
+    let contador_gatos = 0;
+    let contador_periquitos = 0;
+
+    function crear_gato(event){
+        let div01 = document.querySelector("#div01");
+
+        let img = document.createElement("img");  // Creamos la imagen
+        img.src = "../images/campo.jpg";
+        img.alt = "Gato común europeo de color naranja";
+        img.width="300";
+
+        // Añadimos un id a la imagen
+        contador_gatos = contador_gatos + 1;
+        let id = "gato_" + String(contador_gatos) ;
+        img.id = id;
+  
+        // Añadimos un manejador al evento click sobre la imagen
+        img.addEventListener("mouseover", identifica_foto)
+        div01.append(img); // Metemos la imagen en el div
+    }
+
+    function crear_periquito(event){
+        let div01 = document.querySelector("#div01");
+
+        let img = document.createElement("img");  
+        img.src = "../images/arbol.jpg";
+        img.alt = "Periquito azul";
+        img.width="300";
+
+        // Añadimos un id a la imagen
+        contador_periquitos = contador_periquitos + 1;
+        let id = "periquito" + String(contador_periquitos) ;
+        img.id = id;
+  
+        // Añadimos un manejador al evento click sobre la imagen
+        img.addEventListener("click", identifica_foto)
+
+        div01.append(img); 
+    }
+
+    function identifica_foto(event){
+        let id_foto = event.target.id;
+        console.log(id_foto);
+        let span01 = document.querySelector("#span01");
+        span01.textContent = id_foto;
+    }
+
+    let boton01 = document.querySelector("#boton01");
+    boton01.addEventListener("click", crear_gato);
+
+    let boton02 = document.querySelector("#boton02");
+    boton02.addEventListener("click", crear_periquito);
+
+  </script>
+</body>
+</html>
