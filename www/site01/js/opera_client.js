@@ -16,14 +16,6 @@ async function trae_resultado (numero, recurso) {
 }
 
 async function manej_boton01(event) {
-  //Número entero aleatorio entre 0 y 99
-  let numero = Math.floor(100 * Math.random());
-
-  span01.textContent = numero;
-  span02.textContent = await trae_resultado(numero);
-}
-
-async function manej_boton01(event) {
   var numero=0;
   if (errors){
     let random = Math.floor(3 * Math.random());
@@ -41,15 +33,13 @@ async function manej_boton01(event) {
   let resultado = await trae_resultado(numero, "api/dobla/");
   console.log("Resultado:", resultado);
 
+  
+  if (isNaN(resultado)){
+    resultado="error";
+  }
+  
+
   span02.textContent = resultado;
-}
-
-async function manej_boton02(event) {
-  //Número entero aleatorio entre 0 y 99
-  let numero = Math.floor(100 * Math.random());
-
-  span01.textContent = numero;
-  span02.textContent = await trae_resultado(numero);
 }
 
 async function manej_boton02(event) {
@@ -64,10 +54,17 @@ async function manej_boton02(event) {
   }else{
     numero = Math.floor(100 * Math.random());
   }
+
   span01.textContent = numero;
  
   let resultado = await trae_resultado(numero, "api/triplica/");
   console.log("Resultado:", resultado);
+
+  
+  if (isNaN(resultado)){
+    resultado="error";
+  }
+  
 
   span02.textContent = resultado;
 }
@@ -83,13 +80,10 @@ function manej_boton03(event) {
   errors=!errors;
   console.log(errors);
   
-
-  
 }
 
 let boton01 = document.querySelector("#boton01");
 boton01.addEventListener("click", manej_boton01);
-
 
 let boton02 = document.querySelector("#boton02");
 boton02.addEventListener("click", manej_boton02);

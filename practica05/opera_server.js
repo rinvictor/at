@@ -41,6 +41,17 @@ app.get('/api/dobla/:num', (req, res) => {
   res.json(doblado_json);
 })
 
+app.get('/api/triplica/:num', (req, res) => {
+  let num = req.params.num;
+  trip = multiplica(num, 3); //Para multiplicar por 2
+  // Normalmente esto serÃ­a una llamada a una funcion
+
+  console.log("El cliente envía " + num);
+  console.log("La respuesta es " + trip);
+  trip_json = JSON.stringify(trip);
+  res.json(trip_json);
+})
+
 // Error 404 
 app.use((req, res) => {
   res.type('text/plain');
